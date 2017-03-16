@@ -20,9 +20,11 @@ public class formtampil extends javax.swing.JFrame {
         initComponents();
     }
 
-   public formtampil(String nama,String tempat,String tanggal,String bulan,String tahun,String jeniskelamin,String agama,String hoby,String nohp,String alamat) {
+   public formtampil(String nama,String tempat,String tanggal,String bulan,String tahun,String jeniskelamin,
+           String agama,String hoby,String nohp,String alamat) {
     initComponents();
-    hasil.setText("Nama\t\t : "+nama+"\n\nTempat, tanngal lahir \t : "+tempat+" "+tanggal+" "+bulan+" "+tahun+"\n\nJenis Kelamin\t\t : "+jeniskelamin+
+    hasil.setText("Nama\t\t : "+nama+"\n\nTempat, tanngal lahir \t : "+tempat+" "+tanggal+" "+bulan+" "
+            +tahun+"\n\nJenis Kelamin\t\t : "+jeniskelamin+
             "\n\nAgama\t\t : "+agama+"\n\nHoby\t\t : "+hoby+"\n\nNo Telp/Hp\t\t : "+nohp+"\n\nAlamat\t\t : "+alamat);
 }
 
