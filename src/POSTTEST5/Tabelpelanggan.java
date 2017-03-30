@@ -20,18 +20,12 @@ public class Tabelpelanggan extends javax.swing.JFrame {
     public Tabelpelanggan() {
         initComponents();
     }
-//    public void InitKegiatan(){
-//        model= new DefaultTableModel();
-//        model.addColumn("NIM");
-//        model.addColumn("NAMA");
-//        model.addColumn("ANGKATAN");
-//        jTable1.setModel(model);
-//    }
+
     public void InitTable(){
         model = new DefaultTableModel();
-        model.addColumn("NIM");
-        model.addColumn("NAMA");
-        model.addColumn("ANGKATAN");
+        model.addColumn("Nama");
+        model.addColumn("tlpn");
+        model.addColumn("kotaasal");
         jTable1.setModel(model);
     }
     /**
@@ -403,13 +397,13 @@ public class Tabelpelanggan extends javax.swing.JFrame {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
         int baris = jTable1.getSelectedRow();
-        String Nim_edit = jTable1.getValueAt(baris, 0).toString();
-        String Nama_edit = jTable1.getValueAt(baris, 1).toString();
-        String Angkatan_edit = jTable1.getValueAt(baris, 2).toString();
+        String nama_edit = jTable1.getValueAt(baris, 0).toString();
+        String tlpn_edit = jTable1.getValueAt(baris, 1).toString();
+        String kota_edit = jTable1.getValueAt(baris, 2).toString();
         
-        txtnama.setText(Nim_edit);
-        txttelepon.setText(Nama_edit);
-        jComboBox1.setSelectedItem(Angkatan_edit);
+        txtnama.setText(nama_edit);
+        txttelepon.setText(tlpn_edit);
+        jComboBox1.setSelectedItem(kota_edit);
         
     }//GEN-LAST:event_jTable1MouseClicked
 
@@ -424,7 +418,6 @@ public class Tabelpelanggan extends javax.swing.JFrame {
     private void hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusActionPerformed
         // TODO add your handling code here:
         int baris = jTable1.getSelectedRow();
-        JOptionPane.showConfirmDialog(null," yakin mau hapus");
         model.removeRow(baris);
     }//GEN-LAST:event_hapusActionPerformed
 
